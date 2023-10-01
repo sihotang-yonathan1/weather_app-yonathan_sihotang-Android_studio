@@ -1,3 +1,4 @@
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -44,4 +45,18 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    // Retrofit with Scalar Converter
+    implementation("com.squareup.retrofit2:converter-scalars:2.9.0")
+
+    // Retrofit with Moshi Converter
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
+    // Moshi
+    implementation("com.squareup.moshi:moshi-kotlin:1.14.0")
+
+    // Coil
+    implementation("io.coil-kt:coil:2.4.0")
+
+
 }
