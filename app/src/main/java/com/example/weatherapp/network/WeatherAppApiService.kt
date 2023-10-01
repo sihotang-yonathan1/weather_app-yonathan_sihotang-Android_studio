@@ -58,10 +58,10 @@ data class WindInfo (
 
 data class SystemInternalInfo (
     @Json(name = "type") val systemType: Int? = null,
-    val id: Int,
+    val id: Int? = null,
     val country: String,
-    val sunrise: Int,
-    val sunset: Int
+    val sunrise: Int? = null,
+    val sunset: Int? = null
 )
 
 data class Coordinate (
@@ -101,11 +101,6 @@ data class WeatherObject (
     val description: String,
     val icon: String
 )
-
-
-
-
-
 
 
 
