@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
 import coil.load
+import coil.size.Dimension
 import coil.size.Precision
 import coil.size.Scale
 import com.example.weatherapp.network.Coordinate
@@ -57,8 +58,7 @@ class MainActivity : AppCompatActivity() {
             val weatherIconUrl = "https://openweathermap.org/img/wn/${currentWeatherDeferredValue.weather[0].icon}@2x.png"
             weatherIconContainer.load(weatherIconUrl){
                 scale(Scale.FILL)
-                size(300, 500)
-                precision(Precision.EXACT)
+                size(Dimension(280), Dimension(500))
             }
 
             cityNameLabel.text = locationDeferedValue.name
