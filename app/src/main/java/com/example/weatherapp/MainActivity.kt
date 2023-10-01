@@ -65,7 +65,8 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 cityNameLabel.text = locationDeferedValue.name
-                tempNumberLabel.text = currentWeatherDeferredValue.main.temp.toString()
+                tempNumberLabel.text = String.format(
+                    "%s K", currentWeatherDeferredValue.main.temp.toString())
                 weatherNameLabelView.text = currentWeatherDeferredValue.weather[0].main
             }
         }

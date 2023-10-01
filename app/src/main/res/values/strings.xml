@@ -3,5 +3,5 @@
     <string name="app_creator_label">By: Yonathan Hot Gabe Sihotang</string>
     <string name="app_name_label">WeatherApp</string>
     <string name="city_name_label">Manado</string>
-    <string name="temp_label">0 K</string>
+    <string name="temp_label">%s K</string>
 </resources>
