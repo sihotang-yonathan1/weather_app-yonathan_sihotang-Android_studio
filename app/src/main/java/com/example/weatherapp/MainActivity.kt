@@ -3,6 +3,7 @@ package com.example.weatherapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ImageView
 import android.widget.SearchView
 import android.widget.TextView
@@ -56,7 +57,6 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 val currentWeatherDeferredValue = currentWeatherDefered.await()
-
                 Log.d("weather icon", "onCreate: ${currentWeatherDeferredValue.weather[0].icon}")
                 val weatherIconUrl = "https://openweathermap.org/img/wn/${currentWeatherDeferredValue.weather[0].icon}@2x.png"
                 weatherIconContainer.load(weatherIconUrl){
@@ -64,10 +64,21 @@ class MainActivity : AppCompatActivity() {
                     size(Dimension(280), Dimension(500))
                 }
 
-                cityNameLabel.text = locationDeferedValue.name
-                tempNumberLabel.text = String.format(
-                    "%s K", currentWeatherDeferredValue.main.temp.toString())
-                weatherNameLabelView.text = currentWeatherDeferredValue.weather[0].main
+                runOnUiThread {
+                    cityNameLabel.text = locationDeferedValue.name
+                    tempNumberLabel.text = String.format(
+                        "%s K", currentWeatherDeferredValue.main.temp.toString()
+                    )
+
+                    Log.d(
+                        "weatherNameLabelView",
+                        "updateState: ${currentWeatherDeferredValue.weather[0].main}"
+                    )
+                    //weatherNameLabelView.text = currentWeatherDeferredValue.weather[0].main.toString()
+                    Log.d("weatherNameLabelView", "updateState: before ${weatherNameLabelView.text}")
+                    weatherNameLabelView.text = currentWeatherDeferredValue.weather[0]?.main?.toString()
+                    Log.d("weatherNameLabelView", "updateState: after ${weatherNameLabelView.text}")
+                }
             }
         }
 
