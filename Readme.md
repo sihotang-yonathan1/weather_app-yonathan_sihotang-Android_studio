@@ -9,4 +9,5 @@ Aplikasi ini dibuat dengan menggunakan Android studio dengan beberapa dependency
 Aplikasi ini dapat didownload melalui link berikut:
 `https://drive.google.com/file/d/1WelJoG8tMK3Fe1U-Wx3b3c8scV4ibQhM/view?usp=sharing`
 
-# Demo Aplikasi
+# Demo Aplikasi  
+![program demo](https://github.com/sihotang-yonathan1/weather_app-yonathan_sihotang-Android_studio/blob/main/assets/demo_program.gif)
