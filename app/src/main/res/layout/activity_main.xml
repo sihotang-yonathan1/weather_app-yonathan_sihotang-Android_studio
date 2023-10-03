@@ -62,6 +62,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/city_name_label"
+                app:layout_constraintVertical_bias="0.0"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
@@ -96,13 +97,28 @@
                 android:id="@+id/weather_name_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toTopOf="@+id/temp_label"
+                android:layout_marginTop="174dp"
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/city_name_label"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Weather Category" />
+
+            <TextView
+                android:id="@+id/weather_description_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="45dp"
+                app:layout_constraintBottom_toBottomOf="@+id/temp_label"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/weather_icon_container"
-                tools:text="Manado" />
+                app:layout_constraintTop_toBottomOf="@+id/weather_name_label"
+                tools:text="weather_description" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

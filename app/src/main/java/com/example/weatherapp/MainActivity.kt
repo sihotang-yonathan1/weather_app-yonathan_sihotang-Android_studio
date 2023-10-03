@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         val tempNumberLabel: TextView = findViewById(R.id.temp_label)
         val weatherIconContainer: ImageView = findViewById(R.id.weather_icon_container)
         val weatherNameLabelView: TextView = findViewById(R.id.weather_name_label)
+        val weatherDescriptionLabel: TextView = findViewById(R.id.weather_description_container)
 
         fun updateState(locationName: String = "Manado"){
             runBlocking {
@@ -77,6 +78,7 @@ class MainActivity : AppCompatActivity() {
                     //weatherNameLabelView.text = currentWeatherDeferredValue.weather[0].main.toString()
                     Log.d("weatherNameLabelView", "updateState: before ${weatherNameLabelView.text}")
                     weatherNameLabelView.text = currentWeatherDeferredValue.weather[0]?.main?.toString()
+                    weatherDescriptionLabel.text = currentWeatherDeferredValue.weather[0]?.description.toString()
                     Log.d("weatherNameLabelView", "updateState: after ${weatherNameLabelView.text}")
                 }
             }
