@@ -91,7 +91,8 @@ interface  CurrentWeatherApiService {
         @Query("lat") latitude: Double,
         @Query("lon") longitude: Double,
         @Query("appid") apiKey: String = "d0803559f03dafe4ee9b2515f4dc8c21",
-        @Query("lang") language: String = "id"
+        @Query("lang") language: String = "id",
+        @Query("units") unitType: String = "metric"
     ): CurrentWeatherApiResponse
 }
 

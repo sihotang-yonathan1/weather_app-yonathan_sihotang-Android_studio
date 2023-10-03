@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                 runOnUiThread {
                     cityNameLabel.text = locationDeferedValue.name
                     tempNumberLabel.text = String.format(
-                        "%s K", currentWeatherDeferredValue.main.temp.toString()
+                        "%s \u2103", currentWeatherDeferredValue.main.temp.toString()
                     )
 
                     Log.d(
