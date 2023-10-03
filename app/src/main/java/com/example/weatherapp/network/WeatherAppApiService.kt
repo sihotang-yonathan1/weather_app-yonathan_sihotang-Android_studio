@@ -24,7 +24,7 @@ private val retrofit = Retrofit.Builder()
 
 data class GeoCodingDirectResponse (
     val name: String,
-    @Json(name = "local_names") val localNames: Map<String, String>,
+    @Json(name = "local_names") val localNames: Map<String, String>? = null,
     val lat: Double,
     val lon: Double,
     val country: String
