@@ -33,6 +33,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
+import retrofit2.HttpException
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
@@ -106,13 +107,11 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
                 else {
-                    if (locationName != ","){
-                        cityNameLabel.text = null
-                        weatherNameLabelView.text = "Error, no data found"
-                        weatherIconContainer.visibility = View.INVISIBLE
-                        weatherDescriptionLabel.text = null
-                        tempNumberLabel.text = null
-                    }
+                    cityNameLabel.text = null
+                    weatherNameLabelView.text = "Error, no data found"
+                    weatherIconContainer.visibility = View.INVISIBLE
+                    weatherDescriptionLabel.text = null
+                    tempNumberLabel.text = null
                 }
             }
         }
@@ -168,11 +167,19 @@ suspend fun getCItyData(locationName: String = "Manado", limit: Int = 1): List<G
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .build()
 
-    val service = retrofit_obj.create(GeoCodingApiService::class.java)
-    return service.getLocationInfo(
-        locationName = locationName,
-        limit = limit
-    )
+    try {
+        val service = retrofit_obj.create(GeoCodingApiService::class.java)
+        return service.getLocationInfo(
+            locationName = locationName,
+            limit = limit
+        )
+    }
+    catch (e: HttpException){
+        Log.e(
+            "HTTP_ERROR",
+            "getCItyData: HTTP ${e.code()} ${e.message()}: ${e.response()?.errorBody()}", )
+        return emptyList()
+    }
 
 }
 
