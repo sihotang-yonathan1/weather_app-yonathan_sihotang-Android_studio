@@ -40,13 +40,15 @@
         android:layout_width="298dp"
         android:layout_height="355dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="120dp"
         android:paddingBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -125,21 +127,22 @@
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="278dp"
         android:layout_height="51dp"
         android:layout_marginTop="40dp"
+        android:hint="Nama Lokasi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_creator_label"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        app:startIconDrawable="@drawable/round_search_24"
-        android:hint="Nama Lokasi">
+        app:startIconDrawable="@drawable/round_search_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/locationSearchView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:imeOptions="actionDone"/>
+            android:imeOptions="actionDone" />
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
