@@ -10,4 +10,4 @@ Aplikasi ini dapat didownload melalui link berikut:
 `https://drive.google.com/file/d/1Dz5QQK0gupVyliboShremFteIkKFUG-l/view?usp=sharing`
 
 # Demo Aplikasi  
-![program demo]()
+![program demo](https://github.com/sihotang-yonathan1/weather_app-yonathan_sihotang-Android_studio/blob/main/assets/demo_program_1.gif)
