@@ -7,7 +7,7 @@ Aplikasi ini dibuat dengan menggunakan Android studio dengan beberapa dependency
 
 ## Download
 Aplikasi ini dapat didownload melalui link berikut:
-`https://drive.google.com/file/d/1WelJoG8tMK3Fe1U-Wx3b3c8scV4ibQhM/view?usp=sharing`
+`https://drive.google.com/file/d/1Dz5QQK0gupVyliboShremFteIkKFUG-l/view?usp=sharing`
 
 # Demo Aplikasi  
 ![program demo]()
